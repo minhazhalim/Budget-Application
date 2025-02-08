@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+     <title>Budget Application</title>
+     <link rel="stylesheet" href="designing.css">
+     <script src="software.js" defer></script>
+</head>
+<body>
+     <div class="headerBar">
+          <header>
+               <h1 class="title">my budget tracker</h1>
+               <h2 class="topBar">your current balance</h2>
+               <p>
+                    <span class="currency">$</span>
+                    <span class="balance"></span>
+               </p>
+          </header>
+     </div>
+     <div class="content">
+          <h3 class="secondTitle">add a new transaction: </h3>
+          <div class="form">
+               <form id="expForm">
+                    <div class="formLine left">
+                         <span class="type">type:</span>
+                         <select id="type">
+                              <option value="chooseOne">choose one...</option>
+                              <option value="income">income</option>
+                              <option value="expense">expense</option>
+                         </select>
+                    </div>
+                    <div class="formLine right">
+                         <span for="name">name:</span>
+                         <input type="text" id="name">
+                    </div>
+                    <div class="formLine right">
+                         <span for="amount">amount:</span>
+                         <input type="text" id="amount">
+                    </div>
+                    <button type="submit" class="buttonSave">add to transaction</button>
+               </form>
+          </div>
+     </div>
+     <div class="content">
+          <table class="table">
+               <thead>
+                    <tr>
+                         <th>type</th>
+                         <th>name</th>
+                         <th>amount</th>
+                         <th>options</th>
+                    </tr>
+               </thead>
+               <tbody id="transactionTable"></tbody>
+          </table>
+     </div>
+</body>
+</html>
